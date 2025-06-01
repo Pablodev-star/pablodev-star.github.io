@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Redirigiendo...</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+      body {
+        background: #181920;
+        color: #eee;
+        font-family: Montserrat, Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      h1 {
+        margin-bottom: 10px;
+        font-size: 2em;
+      }
+      .msg {
+        color: #ffcc00;
+        margin-bottom: 14px;
+      }
+      .small {
+        color: #aaa;
+        font-size: .98em;
+      }
+    </style>
+    <script>
+      // Si hay access_token en el hash, redirige a la subcarpeta conservando el hash
+      if (window.location.hash.includes('access_token')) {
+        window.location.replace('/1kb-minigames-hub/' + window.location.hash);
+      } else {
+        // Si no, redirige normal a la subcarpeta
+        window.location.replace('/1kb-minigames-hub/');
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Redirigiendo…</h1>
+    <div class="msg">Te estamos llevando a 1KB Minigames Hub.</div>
+    <div class="small">Si no ocurre nada, <a href="/1kb-minigames-hub/">haz click aquí</a>.</div>
+  </body>
+</html>
